@@ -1,0 +1,353 @@
+/* Letras */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+10+Charted&family=Teko:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+ 
+}
+
+/* Formato */
+
+h1,  h2, h3, p{
+    margin: 0px;
+    padding: 10px;
+}
+
+body{
+    background-color: black;
+    height: 100vh; /*Vision height para responsive*/
+
+}
+/* contendor */
+
+.contenedor{
+    font-family: "Teko", sans-serif;
+    margin: 20px auto;
+    width: 90%;
+}
+header{
+    align-items: center;
+    justify-content: left;
+}
+/*Menu*/
+nav{
+    background-color: rgb(57, 99, 55, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    z-index: 5; /*Para superponerlo de la pagina principal*/
+    flex-wrap: wrap;
+}
+.contenido-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.menu{
+    list-style: none;
+    padding: 4.5rem;
+    transition: all 0.3s ease 0s;
+}
+
+li {
+    list-style: none;
+    padding: 1.2rem;
+    transition: all 0.3s ease 0s; /* all se aplica a todas las transiciones aparece en 0.3s EASE 0 comienza inmediatamente */
+}
+
+li a {
+    text-decoration: none; /*Las etiqetas a que vengan de una lista sindeconracion y de color blanco*/
+    color: whitesmoke;
+}
+
+li:hover {
+    background-color: #008849;
+}
+
+.columna {
+    position: flex;
+}
+
+.columna1 {
+    display: none;
+    position: absolute;
+    margin-top: 1vw;
+
+}
+
+.columna1>li {
+    width: 100%;
+    transform: translateX(-20px);
+    border-bottom: 1px solid #fff;/*Para crear el submeno yy que todas las listas hijo se posicionen 20px abajo del eje x*/
+    text-align: center;
+    background-color: #24252a;
+}
+/*Establece bases de submenu*/
+.columna1>li:hover {
+    background-color: #089234;
+}
+/*Esto marca las casillas de color verde del submenu*/
+.columna:hover>.columna1 {
+    display: block;
+}
+/*Contenenedor general del resto d ela pagina*/
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1;
+}
+/*Caracteristicas de los headers y el section*/
+section header{
+    display: flex;
+    flex-wrap: wrap;
+    height: 4rem;
+}
+/*Caracteristicas de los headers y el section*/
+.contenido-principal section header{
+    
+    align-items: left;
+    text-align:justify;
+    font-size: 2vw;
+    font-family: "Teko", sans-serif;
+    font-weight: 5vw;
+    color: whitesmoke;
+}
+/*Caracteristicas del header*/
+header {
+    background-color: #333;
+    color: #fff;
+
+}
+/*Contenedores*/
+
+#content-container {
+    display: flex; 
+}
+#main-content {
+    width: 75%;
+}
+/*Caracteristicas del article*/
+article {
+    padding: 20px;
+    margin-right: 20px;
+}
+/*Caracteristicas del aside*/
+aside {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+/*Caracteristicas del pie de foto*/
+.pie {
+    position: relative;
+    display: flex;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*Caracteristicas imagen*/
+.ovalo {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border-radius: 100px;
+}
+img{
+    width: 290px;
+    height: 174px;
+    display: flex;
+    
+}
+/*Posicion del copyright*/
+.copy{
+    position: relative;
+    display: flex;
+    left: 800px;
+    bottom: 50px;
+    width: 100%;
+    color: #fff;
+}
+
+/*Parametros para hacer efecto zoom in en reja 3x3*/
+.forma{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 0px;
+   
+}
+.forma:after{
+    content: '';
+    display: block;
+    height: 0px;
+    clear: both;
+
+}
+.forma div{
+    text-align: center;
+    padding: 1px;
+    margin-top: 80px;
+    border: 1px solid #ccc; /* Añade un borde para visualizar los boxes */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    box-sizing: border-box;
+    white-space: nowrap;/* Evita que el texto se ajuste al tamaño del box */
+    overflow: hidden;/* Oculta el contenido si es más grande que el tamaño del box */
+    
+ }
+ .forma div img{
+    width: 100%;
+    height: 93%;
+    border: 5px solid #fff;
+ }
+ .forma div a:hover{
+    color: white;
+    background: rgb(66, 188, 96);
+    transition: 0.5s;
+ }
+ .forma:hover div{
+    opacity: 0.4;
+    transform: scale(1,1);
+    transition: 1s;
+ }
+ .forma:hover div:hover{
+    opacity: 1;
+    transform: scale(1.25);
+    pointer-events: auto;
+ }
+.forma div img~span{ /*El span adyacente a img se oculte*/
+    width: 100%;
+    display: block;
+    opacity: 0;
+    margin: 0;
+    color: #fff ;
+    background: rgba(31, 154, 43, 0.7);
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+
+}
+.forma div img:hover+span{
+    opacity: 1;
+    pointer-events: auto;/*Con esto intento que se pueda clicar sobre los boxes para que te lleven a un hipervinculo*/
+    z-index: -1;
+}
+/*Extras*/
+
+.nodisc li:hover{
+    list-style-type: none; /*Hace que algunas listas  tengan fondo blanco sin discos en funcion hover*/
+}
+.nodisc li{
+    background-color: whitesmoke;
+}
+.nada li:hover{
+    background-color: whitesmoke; /*Hace que algunas listas  tengan fondo blanco en funcion hover*/
+}
+.negro li:hover{
+    background-color: black; /*Hace que algunas listas  tengan fondo negro en funcion hover*/
+    list-style-type: disc;
+}
+.negro li{
+    list-style-type: disc;
+}
+.nada li{
+    list-style-type: disc;
+}
+.discos li{
+    list-style-type: disc;
+}
+.blanco{
+    color: #fff;
+}
+.left {
+    margin-left: 10px;
+    text-align: left;
+}
+/*Hipervinculos*/
+a{
+    color: green;
+}
+/*Cursiva*/
+em{
+    margin-left: 25px;
+}
+
+/*Parte responsive*/
+
+/*Para resoluciones de mas de 1300*/
+@media screen and (min-width: 1300px) {
+    .contenedor {
+        width: 90%; /* Reducir el ancho del contenedor principal para que no se extienda demasiado en pantallas grandes */
+    }
+    aside {
+        width: 20%; /* Ajustar el ancho del aside */
+    }
+    #main-content {
+        width: 75%; /* Ajustar el ancho del contenido principal */
+    }
+    section.forma div img {
+        width: 100%; /* Ajustar el ancho de las imágenes en el contenido principal */
+        height: auto; /* Mantener la proporción de las imágenes */
+    }
+}
+/*Para resolucion tablet en vertical*/
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .contenedor {
+        width: 90%; /* Reducir el ancho del contenedor principal para que se adapte al ancho de la pantalla */
+    }
+    aside {
+        display: none; /* Ocultar el aside en tabletas en posición vertical para ahorrar espacio */
+    }
+    #main-content {
+        width: 100%; /* Ajustar el ancho del contenido principal para ocupar toda la pantalla */
+    }
+}
+
+/*Para resolucion tablet horizontal*/
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .contenedor {
+        width: 90%; /* Reducir el ancho del contenedor principal para que se adapte al ancho de la pantalla */
+    }
+    aside {
+        width: 20%; /* Ajustar el ancho del aside */
+    }
+    #main-content {
+        width: 75%; /* Ajustar el ancho del contenido principal */
+    }
+    section.forma div img {
+        width: 100%; /* Ajustar el ancho de las imágenes en el contenido principal */
+        height: auto; /* Mantener la proporción de las imágenes */
+    }
+}
+
+/*Para resolucion telefono vertical*/
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .contenedor {
+        width: 90%; /* Reducir el ancho del contenedor principal para que se adapte al ancho de la pantalla */
+    }
+    aside {
+        display: none; /* Ocultar el aside en teléfonos en posición vertical para ahorrar espacio */
+    }
+    #main-content {
+        width: 100%; /* Ajustar el ancho del contenido principal para ocupar toda la pantalla */
+    }
+}
+
+/*Para resolucion telefono horizontal*/
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .contenedor {
+        width: 90%; /* Reducir el ancho del contenedor principal para que se adapte al ancho de la pantalla */
+    }
+    aside {
+        display: none; /* Ocultar el aside en teléfonos en posición horizontal para ahorrar espacio */
+    }
+    #main-content {
+        width: 100%; /* Ajustar el ancho del contenido principal para ocupar toda la pantalla */
+    }
+}
+
