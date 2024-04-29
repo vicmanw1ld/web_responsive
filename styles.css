@@ -267,10 +267,8 @@ footer{
         margin: 0 auto;
     }
     footer{
-        position: relative;
-        display: flex;
         width: 50%;
-        top: 200px;
+        bottom: 10px;
     }
     
 }
