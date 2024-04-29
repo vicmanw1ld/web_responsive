@@ -1,0 +1,276 @@
+/* Letras */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+10+Charted&family=Teko:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+
+}
+
+/* reseteos */
+
+h1, p{
+    margin: 0px;
+    padding: 10px;
+}
+
+/* body */
+
+body{
+    background-color: black;
+    height: 100vh;
+
+}
+
+/* contendor */
+
+.contenedor{
+    font-family: "Teko", sans-serif;
+    margin: 20px auto;
+    width: 90%;
+}
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* nav */
+
+nav{
+    background-color: rgb(57, 99, 55, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    
+}
+.contenido-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+li {
+    list-style: none;
+    padding: 1.2rem;
+    transition: all 0.3s ease 0s;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+li:hover {
+    background-color: #008849;
+}
+
+.columna {
+    position: flex;
+}
+
+.columna1 {
+    display: none;
+    position: absolute;
+    margin-top: 1.5vw;
+
+}
+
+.columna1>li {
+    width: 100%;
+    transform: translateX(-20px);
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    background-color: #24252a;
+}
+
+.columna1>li:hover {
+    background-color: rgb(57, 99, 55, 0.8);
+
+}
+
+.columna:hover>.columna1 {
+    display: block;
+}
+
+.contenido-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* contenido principal section*/
+
+.contenido-principal section{
+    width:60%;
+    height: 100%;
+}
+
+.contenido-principal section header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 45rem;
+}
+
+.contenido-principal section header .imagen-position{
+    position: relative;
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+
+
+.contenido-principal section header .texto{
+    width: 100%; 
+    align-items: center;
+    /* padding: 10px; */
+    text-align: center;
+    font-size: 2vw;
+    font-family: "Teko", sans-serif;
+    font-weight: 5vw;
+    color: whitesmoke;
+}
+
+/* contenido principal aside */
+
+aside {
+    width: 40%;
+
+}
+aside h1 {
+    position: relative;
+    display: flex;
+    right: 10rem;
+    top: 12rem;
+    font-size: 4.5rem;
+    font-weight: 2rem;
+    font-family: "Teko", sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    font-style: italic;
+
+}
+
+aside h1:hover {
+    margin: 60px;
+    color: rgb(57, 99, 55);
+    transition: 3s;
+}
+
+/* footer */
+
+footer{
+    position: relative;
+    display: flex;
+    left: 800px;
+    bottom: 50px;
+    width: 100%;
+    color: #fff;
+}
+
+/* @media screen */
+
+/* telefono vertical */
+
+@media screen and (max-width: 767px){
+    nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    li{
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+    }
+    .columna{
+        display: block;
+    }
+    .columna1{
+        display: none;
+
+    }
+
+    .contenido-principal .imagen-position{
+        width: 25%;
+    }
+    aside h1{
+        position: absolute;
+        display: block;
+        right: 200px;
+        font-size: 30px;
+        width: 40%;
+        height: 10%;
+        top: 520px;
+    }
+    footer{
+        position: absolute;
+        display: inline-block;
+        width: 55%;
+        left: 200px;
+    }
+}
+
+
+/* Movil y tablet en horizontal */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    nav{
+        width: 100%;
+        /* ordena los elemento en fila */
+        flex-direction: column;
+        /* permite que los objetos salten */
+        flex-wrap: wrap; 
+    }
+    .contenido-ul{
+        /*  alineo los elementos en vertical */
+        align-items:center;
+    }
+    li{
+        margin-right: 20;
+        margin-bottom: 15px;
+        width: 50%;
+        text-align: center;
+    }
+    .columna1{
+        display: none;
+
+    }
+
+    .contenido-principal section{
+        width: 100%;
+    }
+    .contenido-principal .imagen-position{
+        width: 45%;
+    }
+    aside h1{
+        position: absolute;
+        display: block;
+        font-size: 40px;
+        width: 20%;
+        height: 10%;
+        right: 200px;
+    }
+    
+}
+
+/* adaptación de pantalla de 1300px */
+
+@media screen and (min-width: 1300px) {
+    .contenedor{
+        width: 100%;
+        margin: 0 auto;
+    }
+    footer{
+        position: relative;
+        display: flex;
+        width: 50%;
+        top: 200px;
+    }
+    
+}
