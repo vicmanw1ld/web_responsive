@@ -209,8 +209,6 @@ footer{
         top: 520px;
     }
     footer{
-        position: absolute;
-        display: inline-block;
         width: 55%;
         left: 200px;
     }
@@ -255,6 +253,11 @@ footer{
         width: 20%;
         height: 10%;
         right: 200px;
+    }
+    footer{
+        
+        width: 55%;
+        left: 200px;
     }
     
 }
