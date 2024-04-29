@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+10+Charted&family=Teko:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100%;
+    background-size: cover;
+    background-image:url(../img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 20;
+    padding: 20;
+}
+/* COntenedor*/
+
+.contenedor{
+    font-family: "Teko", sans-serif;
+    margin: 20px auto;
+    width: 90%;
+}
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: rgb(57, 99, 55, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.contenido-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+
+.columna {
+    position: flex;
+    list-style: none;
+    padding: 1.2rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    padding: 1.5vw;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+li.columna:hover {
+    background-color: #008849;
+}
+
+
+/* Formulario*/
+
+.formulario-container {
+    width: 50%;
+    margin: 50px auto;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.localizacion {
+    align-items: center;
+}
+
+form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.informacion-contacto {
+    width: 50%;
+    margin: 50px auto;
+}
+
+
+
+.boton-registro {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton-registro:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para pantallas con ancho mayor a 1300px */
+@media screen and (min-width: 1300px) {
+    .formulario-container {
+        width: 50%;
+    }
+
+    .informacion-contacto {
+        width: 50%;
+    }
+    .contenedor {
+        width: 50%;
+    }
+    .footer {
+        width: 50%;
+    }
+}
+
+/* Estilos para tablet en posición vertical */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .formulario-container {
+        width: 80%;
+    }
+    .informacion-contacto {
+        width: 80%;
+    }
+    .contenedor {
+        width: 80%;
+    }
+
+}
+
+/* Estilos para tablet en posición horizontal */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .formulario-container {
+        width: 60%;
+    }
+    .informacion-contacto {
+        width: 60%;
+    }
+    .contenedor {
+        width: 60%;
+    }
+
+}
+
+
+/* Estilos para teléfono en posición vertical */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .formulario-container {
+        width: 90%;
+    }
+    .informacion-contacto {
+        width: 90%;
+    }
+    .contenedor {
+        width: 90%;
+    }
+
+}
+
+/* Estilos para teléfono en posición horizontal */
+@media screen and (max-width: 812px) and (orientation: landscape) {
+    .formulario-container {
+        width: 80%;
+    }
+    .informacion-contacto {
+        width: 80%;
+    }
+    .contenedor {
+        width: 80%;
+    }
+
+}

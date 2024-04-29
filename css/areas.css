@@ -1,0 +1,140 @@
+/* Tipo de letras */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+10+Charted&family=Teko:wght@300..700&display=swap');
+
+
+
+body {
+    background-image: url(../img/fondo4.jpg);
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Barra de navegacion*/
+
+.contenedor{
+    font-family: "Teko", sans-serif;
+    margin: 20px auto;
+    width: 90%;
+}
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: rgb(57, 99, 55, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.contenido-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.columna {
+    position: flex;
+    list-style: none;
+    padding: 1.2rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    padding: 1.5vw;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+li.columna:hover {
+    background-color: #008849;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin: 20%;
+}
+/* tablas de areas */
+
+h1{
+    color: rgb(4, 19, 104);
+    margin:50px 0px;
+    display: block;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 5 5 80px white;
+}
+
+.fotos{
+    width: 100%;
+    margin: 0 auto;
+}
+.container:after{
+    /*Muestre elementos flotantes*/
+    content:"";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+.container {
+    width: 90%;
+    margin:0 9%;
+}
+/*Estructura galeria*/
+.container div{
+    width: 28%;
+    height: auto;
+    display: inline;
+    float: left;
+    margin:0% 3% 0% 0%;
+    padding:0px;
+}
+.container div img{
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px #666;
+    border: 5px solid #fff;
+}
+/* Que no se muestre*/
+.container div img~span{
+    width: 100%;
+    display: block;
+    opacity:0;
+    margin:0;
+    padding:4px 8px;
+    color:white;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 10px #666;
+    text-align: center;
+    font-size: 25px;
+}
+/* Descripción al poner cursor encima de la imagen*/
+.container div img:hover+span{
+    opacity: 5;
+}
+/* Comportamiento imágenes al poner el cursor */
+.container:hover div{
+    opacity: 0.2;
+    transform: scale(0.5);
+    transition:2s;
+}
+/* Comportamiento imagen seleccionada*/
+.container:hover div:hover{
+    opacity: 1;
+    transform: scale(1.5);
+
+}
+
+

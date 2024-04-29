@@ -1,0 +1,142 @@
+/* tipo de letras */
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10+Charted&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+10+Charted&family=Teko:wght@300..700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+.registro{
+    margin: 0px;
+    background: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.login{
+    margin: 0px;
+    background: url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Contenedor*/
+
+.contenedor{
+    font-family: "Teko", sans-serif;
+    margin: 20px auto;
+    width: 90%;
+}
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: rgb(57, 99, 55, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.contenido-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+
+.columna {
+    position: flex;
+    list-style: none;
+    padding: 1.2rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    padding: 1.5vw;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+li.columna:hover {
+    background-color: #008849;
+}
+
+
+
+/*formulario*/
+
+.contenedor-div{
+    width: 100%;
+    padding: 15px;
+}
+
+.formulario{
+    background: #fff;
+    margin-top: 100px;
+}
+h1{
+    padding-top: 20px;
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+}
+
+img{
+    padding-top: 4px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+input[type="text"], input[type="password"]{
+    text-align: center;
+    font-size: 24px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.button{
+    border: none;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    background-color: #16499b;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(58, 197, 192);
+}
+p{
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+    color: #1c39cdb5;
+    font-weight: 600px;
+}
+
+.link:hover{
+    color: rgb(201, 109, 109);
+}
+
+@media(min-width: 768px){
+    .formulario{
+        margin-top: 150px;
+        width: 500px;
+        margin: auto;
+        border-radius: 2%;
+    }
+}
