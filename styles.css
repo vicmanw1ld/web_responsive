@@ -197,6 +197,7 @@ footer{
     }
 
     .contenido-principal .imagen-position{
+        position: absolute;
         width: 50%;
         bottom: 10px;
     }
@@ -220,7 +221,7 @@ footer{
     }
     footer{
         width: 55%;
-        left: 200px;
+        left: 190px;
     }
 }
 
