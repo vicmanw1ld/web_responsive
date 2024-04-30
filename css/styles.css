@@ -174,9 +174,9 @@ footer{
 
 /* @media screen */
 
-/* telefono vertical */
+/* móvil vertical */
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px) and (orientation: portrait) {
     nav{
         width: 100%;
         margin: 0 auto;
@@ -185,18 +185,25 @@ footer{
     li{
         margin-right: 0;
         margin-bottom: 15px;
-        width: 100%;
+        width: 50%;
         text-align: center;
     }
     .columna{
         display: block;
     }
-    
+    .columna1{
+        display: none;
+    }
 
     .contenido-principal .imagen-position{
         width: 50%;
         bottom: 10px;
     }
+
+    .contenido-principal .imagen-position img{
+        width: 300px;
+    }
+
     .contenido-principal section header .texto{
         height: 20%;
         top: 100px;
@@ -204,13 +211,10 @@ footer{
         font-size: 1.3rem;
     }
     aside h1{
-        position: absolute;
-        display: block;
-        right: 100px;
+        width: 50%;
         font-size: 30px;
-        width: 40%;
         height: 10%;
-        top: 520px;
+        top: 400px;
     }
     aside h1:hover {
         display: none;
@@ -220,17 +224,30 @@ footer{
         left: 190px;
     }
 }
-
-
-/* Movil y tablet en horizontal */
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* movil en horizontal */
+@media screen and (max-width: 768px) and (orientation: landscape) {
     nav{
-        width: 100%;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .contenido-principal .imagen-position img{
+        width: 300px;
+    }
+    footer{
+        width: 55%;
+        left: 300px;
+    }
+}    
+
+
+/* tablet en vertical */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    nav{
+        width: 50%;
         /* ordena los elemento en fila */
         flex-direction: column;
-        /* permite que los objetos salten */
-        flex-wrap: wrap; 
+        
     }
     .contenido-ul{
         /*  alineo los elementos en vertical */
@@ -242,34 +259,75 @@ footer{
         width: 50%;
         text-align: center;
     }
-    /* .columna1{
-        display: none;
-
-    } */
+    
 
     .contenido-principal section{
         width: 100%;
     }
-    .contenido-principal .imagen-position{
-        width: 45%;
+    
+    .contenido-principal .imagen-position img{
+        width: 70%;
     }
+
     aside h1{
         position: absolute;
         display: block;
         font-size: 40px;
-        width: 20%;
-        height: 10%;
-        right: 130px;
+        width: 50%;
+        left: 100px;
     }
     aside h1:hover {
         display: none;
     }
     
     footer{
-        width: 55%;
-        left: 200px;
+        width: 70%;
+        left: 100px;
+        
     }
     
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    nav{
+        width: 50%;
+        /* ordena los elemento en fila */
+        flex-direction: column;
+        
+    }
+    .contenido-ul{
+        /*  alineo los elementos en vertical */
+        align-items:center;
+    }
+    li{
+        margin-right: 20;
+        margin-bottom: 15px;
+        width: 50%;
+        text-align: center;
+    }
+    .contenido-principal section{
+        width: 100%;
+    }
+    
+    .contenido-principal .imagen-position img{
+        width: 70%;
+    }
+
+    aside h1{
+        position: absolute;
+        display: block;
+        font-size: 40px;
+        width: 50%;
+        left: 100px;
+    }
+    aside h1:hover {
+        display: none;
+    }
+    
+    footer{
+        width: 70%;
+        left: 100px;
+    }
 }
 
 /* adaptación de pantalla de 1300px */
